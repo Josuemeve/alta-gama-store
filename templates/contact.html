@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Contactos - Alta Gama Store{% endblock %}
+
+{% block content %}
+<section class="contact">
+    <h2>Contactos</h2>
+    <div class="contact-info">
+        <p>Para cualquier consulta, no dudes en contactarnos a través de los siguientes medios:</p>
+        <ul>
+            <li><strong>Teléfono:</strong> +123 456 789</li>
+            <li><strong>Email:</strong> contacto@altagamastore.com</li>
+            <li><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</li>
+        </ul>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="social-media">
+            <a href="#"><img src="{{ url_for('static', filename='img/whatsapp.png') }}" alt="WhatsApp">Whatsapp</a>
+            <a href="#"><img src="{{ url_for('static', filename='img/instagram.png') }}" alt="Instagram">Instagram</a>
+            <a href="#"><img src="{{ url_for('static', filename='img/facebook.png') }}" alt="Facebook">Facebook</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

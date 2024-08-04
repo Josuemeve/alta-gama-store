@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8b7fc7;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+}
+
+header {
+    color: #090c0c;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container .logo {
+    height: 25vh;
+    padding: 10px;
+}
+
+.container .logo #logo {
+    width: 200px;
+}
+
+.user-options {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.user-options a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.user-options a:hover {
+    text-decoration: underline;
+    color: #090c0c;
+}
+
+.user-options img {
+    width: 25px;
+    object-fit: cover;
+    margin: auto 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;     
+}
+
+.cart-badge {
+    background-color: #FF4500; 
+    color: white; 
+    border-radius: 50%;
+    padding: 2px 6px; 
+    font-size: 12px; 
+    margin-left: 3px; 
+  }
+
+.bienvenida {
+    width: 700px;
+    height: 160px;
+    padding: 10px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #090c0c;
+}
+
+.cart-badge {
+    background-color: #100e0e;
+    border-radius: 50%;
+    color: #fff;
+    padding: 2px 8px;
+    font-size: 12px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.brands img {
+    width: 100px;
+    margin: 10px;
+}
+
+/* Añadir un tamaño fijo a las imágenes de los productos */
+.product-item img {
+    width: 150px; /* Ajusta este valor según sea necesario */
+    height: 150px; /* Ajusta este valor según sea necesario */
+    object-fit: cover; /* Asegura que la imagen cubra el área establecida */
+}
+
+/* Estilos para la sección de productos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    width: 200px; /* Ajusta este valor según sea necesario */
+}
+
+.product-item:hover {
+    transition: transform 0,6 ease;
+    transform:scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* estilos de contactos */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+    color: #090c0c;
+}
+
+.social-media img {
+    object-fit: cover;
+    width: 25px;
+    margin: auto 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.contact h2 {
+    font-size: 40px;
+    color: black;
+}
+
+p {
+    text-align: center;
+}
+
+/* ESTILOS DEL FORMULARIO */
+
+h2, h3 {
+    color: #333;
+    text-align: center;
+}
+
+.checkout {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.billing-details, .order-summary {
+    width: 48%;
+}
+
+.billing-details form, .order-summary form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.order-summary p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .billing-details, .order-summary {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

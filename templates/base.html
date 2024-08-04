@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img id="logo" src="{{ url_for('static', filename='img/Logo_Gama-removebg-preview.png') }}" alt="Alta Gama Store">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar producto" id="search-input">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('product_list', category='celulares') }}">Celulares</a></li>
+                    <li><a href="{{ url_for('product_list', category='tablets') }}">Tablets</a></li>
+                    <li><a href="{{ url_for('product_list', category='laptops') }}">Laptops</a></li>
+                    <li><a href="{{ url_for('product_list', category='accesorios') }}">Accesorios</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-options">
+                <a href="#"><img id="usuario" src="{{ url_for('static', filename='img/Usuario.png') }}" alt="Usuario">Usuario</a>
+                <a href="{{ url_for('checkout') }}"><img id="carrito" src="{{ url_for('static', filename='img/Carrito.png') }}" alt="Carrito"><span class="cart-badge">0</span>Carrito</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <div class="footer">
+        <footer>
+            <p id="copy">&copy; 2024 Alta Gama Store</p>
+        </footer>
+    </div>
+</body>
+</html>

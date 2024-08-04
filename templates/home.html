@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="product-list">
+    {% for product in products %}
+    <div class="product-item">
+        <img src="{{ url_for('static', filename='img/' ~ product.image) }}" alt="{{ product.name }}">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+        <p>{{ product.price }}</p>
+        <button class="add-to-cart-button" data-product-id="{{ product.id }}">Añadir al carrito</button>
+    </div>
+
+    {% endfor %}
+</div>
+
+<div class="bienvenida">
+    <h1>Bienvenidos a Alta Gama Store</h1>
+    <p class="parrafo">
+        Tu destino definitivo para accesorios tecnológicos de calidad
+        Encuentra lo mejor en accesorios para computadoras, celulares y tablets.
+        ¡Ofertas Exclusivas! - Descuentos increíbles en tus marcas favoritas.
+    </p>
+</div>
+{% endblock %}
